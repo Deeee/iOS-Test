@@ -1,0 +1,34 @@
+Total (7hrs 40mins ~ 10hrs 40mins)
+Chat Section (1hr):
+	-30mins on how to auto adjust cell height
+	-30mins on how to make circular icon
+Login Section (2hrs 10mins):
+	-1hr on setting up asynchronous connection with server, 
+	 while finished parsing the Json file received
+	-40mins on popping alert window on main thread
+	-30mins on customize alert window button function
+Animation Section (4hrs 30mins ~ 6 hrs 30mins)
+	-30mins on making required rotation animation
+	-3~4hrs on making spread out and gather in icon animation
+	-1~2hrs on researching how to make uiimageview start animation 
+	 without snapping back to original position after being dragged,
+	 end up with the conclusion that turning off the auto layout will
+	 resolve the problem
+Font setup and auto layout adjust (1 ~ 2hrs)
+	-Putting app provided font with font info into info.list does 
+	 not enable custom font somehow, only Machinato is usable.
+Testing and debugging (1 ~ 2 hrs)
+	-Found the bug where alert window provided segue leads to a "dead"
+	 main view
+	-Found the bug where POST request is sent without parameters
+	-Found the bug where animation doesn't start from current state, then
+	 I used the layer pause and resume function from Developer documentation
+
+#IMPORTANT: 
+	 For animation section, when animating on uiimageview "icon" in animation section,
+	 if the icon has been dragged, the spread out animation will cause the icon snap back to 
+	 its original position. After a long researching, the conclusion I have got is only turning 
+	 off auto-layout will resolve the problem. If any other method is practical, please do 
+	 let me know. The rotating does not cause the dragged icon go back to its original position, 
+	 while I could remove the icon animation to make it seems un-bugged, but I really don't want 
+ 	 to waste the animation. :)

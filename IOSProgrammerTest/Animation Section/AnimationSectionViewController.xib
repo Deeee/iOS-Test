@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Machinato ExtraLight.ttf">
+            <string>Machinato-ExtraLight</string>
+            <string>Machinato-ExtraLight</string>
+        </mutableArray>
+        <mutableArray key="Machinato SemiBold Italic.ttf">
+            <string>Machinato-SemiBoldItalic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
+            <connections>
+                <outlet property="animBg" destination="3mD-am-Ymv" id="ucw-Hj-4cI"/>
+                <outlet property="animCell" destination="zH3-sc-jnl" id="m1x-8i-9Wt"/>
+                <outlet property="icon" destination="tzN-jj-11A" id="C8K-Xa-Ceo"/>
+                <outlet property="prompt" destination="6XW-AQ-kpZ" id="25E-xz-PN5"/>
+                <outlet property="spinButton" destination="rMI-sn-0fY" id="vjt-2X-Kdc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg_animation.png" translatesAutoresizingMaskIntoConstraints="NO" id="3mD-am-Ymv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-IL-RFt">
+                    <rect key="frame" x="0.0" y="18" width="58" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="73" id="SNj-TO-t1y"/>
+                        <constraint firstAttribute="height" constant="40" id="bjF-RB-kyU"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="btn_back.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SNj-TO-t1y"/>
+                            <exclude reference="bjF-RB-kyU"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="SNj-TO-t1y"/>
+                            <include reference="bjF-RB-kyU"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
+                    </connections>
+                </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="bg_cell_animation_test.png" translatesAutoresizingMaskIntoConstraints="NO" id="zH3-sc-jnl">
+                    <rect key="frame" x="32" y="99" width="257" height="325"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="329" id="koC-Wr-43D"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="koC-Wr-43D"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="koC-Wr-43D"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="6XW-AQ-kpZ">
+                    <rect key="frame" x="40" y="113" width="242" height="185"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="242" id="DiG-bQ-eUT"/>
+                        <constraint firstAttribute="height" constant="185" id="hyl-ic-8jW"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="n2D-Zf-NtY"/>
+                    </constraints>
+                    <string key="text">Animate the App Partner icon. Make it spin around 360 degrees when the spin button is pressed. Allow it to be dragged around the screen by touching and draging.</string>
+                    <fontDescription key="fontDescription" name="Machinato-ExtraLight" family="Machinato" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BONUS POINTS FOR CREATIVITY" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgc-Wa-NuB">
+                    <rect key="frame" x="35" y="204" width="250" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="2tR-zX-Iky"/>
+                        <constraint firstAttribute="height" constant="220" id="zeR-zU-9jA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato-SemiBoldItalic" family="Machinato" pointSize="36"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ANIMATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-YB-G1r">
+                    <rect key="frame" x="100" y="20" width="121" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="121" id="0f2-md-O0b"/>
+                        <constraint firstAttribute="height" constant="26" id="P9u-oh-FV5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato-ExtraLight" family="Machinato" pointSize="22"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0f2-md-O0b"/>
+                            <exclude reference="P9u-oh-FV5"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0f2-md-O0b"/>
+                            <include reference="P9u-oh-FV5"/>
+                        </mask>
+                    </variation>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="icon_apppartner0.png" translatesAutoresizingMaskIntoConstraints="NO" id="tzN-jj-11A">
+                    <rect key="frame" x="60" y="272" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="jz6-6e-gZA"/>
+                        <constraint firstAttribute="width" constant="200" id="tHe-Un-gyX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMI-sn-0fY">
+                    <rect key="frame" x="40" y="463" width="241" height="53"/>
+                    <gestureRecognizers/>
+                    <state key="normal" backgroundImage="btn_spin.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="i6Y-CZ-X3N" appends="YES" id="Xdq-La-72r"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zH3-sc-jnl" secondAttribute="bottom" constant="144" id="12H-Rz-Omt"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zH3-sc-jnl" secondAttribute="trailing" constant="31" id="71f-Uc-uVy"/>
+                <constraint firstItem="6XW-AQ-kpZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="89S-H5-tie"/>
+                <constraint firstAttribute="centerX" secondItem="erY-YB-G1r" secondAttribute="centerX" id="8n6-db-kE0"/>
+                <constraint firstAttribute="bottom" secondItem="tzN-jj-11A" secondAttribute="bottom" constant="96" id="9FG-Tf-cnd">
+                    <variation key="widthClass=compact" constant="154"/>
+                </constraint>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99" id="9yP-SY-vAd"/>
+                <constraint firstAttribute="bottom" secondItem="rMI-sn-0fY" secondAttribute="bottom" constant="51" id="Ab8-Qq-FdG"/>
+                <constraint firstItem="rMI-sn-0fY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="41" id="CTU-b7-s8r"/>
+                <constraint firstItem="3mD-am-Ymv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EOS-GT-1au"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="IFM-uh-CNa"/>
+                <constraint firstItem="Tbj-IL-RFt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="JwT-lT-BTK"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Mzg-15-x0L"/>
+                <constraint firstItem="Tbj-IL-RFt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="N4q-Vt-41f"/>
+                <constraint firstItem="tzN-jj-11A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="272" id="O03-J2-fzJ">
+                    <variation key="widthClass=compact" constant="214"/>
+                </constraint>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zH3-sc-jnl" secondAttribute="trailing" constant="31" id="O1Z-go-CHH"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="centerX" secondItem="tzN-jj-11A" secondAttribute="centerX" id="PKF-bU-zlA"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99" id="Qsq-6a-9gh"/>
+                <constraint firstAttribute="trailing" secondItem="6XW-AQ-kpZ" secondAttribute="trailing" constant="38" id="Qz3-xJ-wL8"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rMI-sn-0fY" secondAttribute="trailing" constant="40" id="R03-0O-ari"/>
+                <constraint firstAttribute="trailing" secondItem="Cgc-Wa-NuB" secondAttribute="trailing" constant="35" id="Ruw-S7-yX9"/>
+                <constraint firstItem="6XW-AQ-kpZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="SL6-Fk-EqB"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="top" secondItem="Tbj-IL-RFt" secondAttribute="bottom" constant="41" id="TbN-j4-34y"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="leading" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="V7b-k9-KP0"/>
+                <constraint firstItem="tzN-jj-11A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="VES-pR-Tpy"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="zH3-sc-jnl" secondAttribute="bottom" constant="144" id="Wq4-fa-Z1D"/>
+                <constraint firstItem="Cgc-Wa-NuB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="bGo-hl-FtH"/>
+                <constraint firstAttribute="bottom" secondItem="3mD-am-Ymv" secondAttribute="bottom" id="bfm-KU-zhC"/>
+                <constraint firstItem="3mD-am-Ymv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c71-Yx-xx7"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="cVG-fM-TLd"/>
+                <constraint firstAttribute="bottom" secondItem="Cgc-Wa-NuB" secondAttribute="bottom" constant="144" id="f4m-G1-fym"/>
+                <constraint firstItem="Tbj-IL-RFt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fJ2-aj-EEl"/>
+                <constraint firstItem="Tbj-IL-RFt" firstAttribute="leading" secondItem="3mD-am-Ymv" secondAttribute="leading" id="fjN-7V-gDK"/>
+                <constraint firstAttribute="trailing" secondItem="3mD-am-Ymv" secondAttribute="trailing" id="fzS-dM-5IZ"/>
+                <constraint firstItem="erY-YB-G1r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="hDz-FK-oRV"/>
+                <constraint firstItem="rMI-sn-0fY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="41" id="k0f-1n-S2y">
+                    <variation key="widthClass=compact" constant="40"/>
+                </constraint>
+                <constraint firstItem="rMI-sn-0fY" firstAttribute="centerX" secondItem="6XW-AQ-kpZ" secondAttribute="centerX" id="lrb-LQ-yL8">
+                    <variation key="widthClass=compact" constant="-1"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="rMI-sn-0fY" secondAttribute="trailing" constant="39" id="qv5-LB-kL0"/>
+                <constraint firstAttribute="bottom" secondItem="rMI-sn-0fY" secondAttribute="bottom" constant="51" id="r6P-bN-BWO"/>
+                <constraint firstItem="zH3-sc-jnl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99" id="rbK-JX-9ul"/>
+                <constraint firstItem="Cgc-Wa-NuB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="204" id="rgt-5M-giC"/>
+                <constraint firstAttribute="trailing" secondItem="zH3-sc-jnl" secondAttribute="trailing" constant="30" id="vxc-dA-DXV"/>
+                <constraint firstAttribute="bottom" secondItem="zH3-sc-jnl" secondAttribute="bottom" constant="140" id="wxC-M3-NkQ"/>
+                <constraint firstAttribute="bottom" secondItem="6XW-AQ-kpZ" secondAttribute="bottom" constant="270" id="xc0-fy-gyG"/>
+                <constraint firstAttribute="trailing" secondItem="tzN-jj-11A" secondAttribute="trailing" constant="60" id="zpI-YB-dkn"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JwT-lT-BTK"/>
+                    <exclude reference="fjN-7V-gDK"/>
+                    <exclude reference="8n6-db-kE0"/>
+                    <exclude reference="hDz-FK-oRV"/>
+                    <exclude reference="9yP-SY-vAd"/>
+                    <exclude reference="Mzg-15-x0L"/>
+                    <exclude reference="PKF-bU-zlA"/>
+                    <exclude reference="TbN-j4-34y"/>
+                    <exclude reference="k0f-1n-S2y"/>
+                    <exclude reference="lrb-LQ-yL8"/>
+                    <exclude reference="r6P-bN-BWO"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="JwT-lT-BTK"/>
+                    <exclude reference="N4q-Vt-41f"/>
+                    <exclude reference="fJ2-aj-EEl"/>
+                    <include reference="fjN-7V-gDK"/>
+                    <include reference="8n6-db-kE0"/>
+                    <include reference="hDz-FK-oRV"/>
+                    <exclude reference="12H-Rz-Omt"/>
+                    <exclude reference="71f-Uc-uVy"/>
+                    <include reference="9yP-SY-vAd"/>
+                    <exclude reference="IFM-uh-CNa"/>
+                    <include reference="Mzg-15-x0L"/>
+                    <exclude reference="O1Z-go-CHH"/>
+                    <include reference="PKF-bU-zlA"/>
+                    <exclude reference="Qsq-6a-9gh"/>
+                    <include reference="TbN-j4-34y"/>
+                    <exclude reference="V7b-k9-KP0"/>
+                    <exclude reference="Wq4-fa-Z1D"/>
+                    <exclude reference="cVG-fM-TLd"/>
+                    <exclude reference="rbK-JX-9ul"/>
+                    <exclude reference="vxc-dA-DXV"/>
+                    <exclude reference="wxC-M3-NkQ"/>
+                    <exclude reference="Ab8-Qq-FdG"/>
+                    <exclude reference="CTU-b7-s8r"/>
+                    <exclude reference="R03-0O-ari"/>
+                    <include reference="k0f-1n-S2y"/>
+                    <include reference="lrb-LQ-yL8"/>
+                    <exclude reference="qv5-LB-kL0"/>
+                    <include reference="r6P-bN-BWO"/>
+                </mask>
+            </variation>
+        </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="i6Y-CZ-X3N">
+            <connections>
+                <action selector="longPressBegan:" destination="-1" id="xJb-G6-D49"/>
+            </connections>
+        </pongPressGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bg_animation.png" width="320" height="568"/>
+        <image name="bg_cell_animation_test.png" width="257" height="325"/>
+        <image name="btn_back.png" width="6" height="16"/>
+        <image name="btn_spin.png" width="241" height="53"/>
+        <image name="icon_apppartner0.png" width="360" height="360"/>
+    </resources>
+</document>
